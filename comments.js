@@ -1,12 +1,7 @@
 // Create new server
-var express = require('express');
-var express = require('express');
-var router = express.Router();
-
-// Get comments page
-router.get('/', function(req, res) {
-    res.render('comments');
-});
-
-// Export module
-module.exports = router;
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const Comment = require('./models)
